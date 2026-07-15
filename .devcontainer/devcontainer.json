@@ -26,7 +26,7 @@
             "extensions": [
                 "llvm-vs-code-extensions.vscode-clangd",
                 "llvm-vs-code-extensions.vscode-mlir",
-                "llvm-vs-code-extensions.vscode-lldb",
+                "llvm-vs-code-extensions.lldb-dap",
                 
                 "Mlir-Visualizer.mlir-tree-viewer",
 
