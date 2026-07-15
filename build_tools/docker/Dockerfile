@@ -49,6 +49,9 @@ RUN curl -fsSL https://bazel.build/bazel-release.pub.gpg \
   && apt-get install -y "bazel=${BAZEL_VERSION?}" \
   && rm -rf /install-bazel
 
+### Python build dependencies
+RUN pip3 install nanobind
+
 ### Clean up
 RUN apt-get clean \
   && rm -rf /var/lib/apt/lists/*
