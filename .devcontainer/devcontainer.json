@@ -27,6 +27,8 @@
                 "llvm-vs-code-extensions.vscode-clangd",
                 "llvm-vs-code-extensions.vscode-mlir",
                 "llvm-vs-code-extensions.vscode-lldb",
+                
+                "Mlir-Visualizer.mlir-tree-viewer",
 
                 "ms-vscode.cmake-tools",
                 "ms-vscode.cpptools",
