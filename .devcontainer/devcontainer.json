@@ -65,12 +65,23 @@
 
                 "cmake.generator": "Ninja",
                 "cmake.configureOnOpen": true,
+                "cmake.sourceDirectory": "${workspaceFolder}/externals/llvm-project/llvm",
                 "cmake.buildDirectory": "${workspaceFolder}/build",
 
                 "cmake.configureSettings": {
                     "CMAKE_BUILD_TYPE": "Debug",
-                    "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+                    "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                    "CMAKE_C_COMPILER": "/usr/bin/clang",
+                    "CMAKE_CXX_COMPILER": "/usr/bin/clang++",
+                    "LLVM_ENABLE_PROJECTS": "mlir",
+                    "LLVM_EXTERNAL_PROJECTS": "torch-mlir",
+                    "LLVM_EXTERNAL_TORCH_MLIR_SOURCE_DIR": "${workspaceFolder}",
+                    "LLVM_TARGETS_TO_BUILD": "host",
+                    "LLVM_ENABLE_ASSERTIONS": "ON"
                 },
+
+                "cmake.additionalKits": [],
+                "cmake.preferredGenerators": ["Ninja"],
 
                 "cmake.debugConfig": {
                     "type": "lldb-dap"
