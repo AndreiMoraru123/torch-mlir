@@ -63,6 +63,8 @@
                     "--pch-storage=memory"
                 ],
 
+                "cmake.useCMakePresets": "never",
+
                 "cmake.generator": "Ninja",
                 "cmake.configureOnOpen": true,
                 "cmake.sourceDirectory": "${workspaceFolder}/externals/llvm-project/llvm",
@@ -77,8 +79,14 @@
                     "LLVM_EXTERNAL_PROJECTS": "torch-mlir",
                     "LLVM_EXTERNAL_TORCH_MLIR_SOURCE_DIR": "${workspaceFolder}",
                     "LLVM_TARGETS_TO_BUILD": "host",
-                    "LLVM_ENABLE_ASSERTIONS": "ON"
+                    "LLVM_ENABLE_ASSERTIONS": "ON",
+                    "LLVM_BUILD_TESTS": "OFF",
+                    "MLIR_ENABLE_BINDINGS_PYTHON": "ON",
+                    "Python3_FIND_VIRTUALENV": "ONLY",
+                    "Python_FIND_VIRTUALENV": "ONLY"
                 },
+
+                "cmake.defaultBuildTarget": "tools/torch-mlir/all",
 
                 "cmake.additionalKits": [],
                 "cmake.preferredGenerators": ["Ninja"],
